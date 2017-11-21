@@ -15,6 +15,7 @@
 .film-box {
 	background-image:url('/img/madara.jpg');
 	background-size: cover;
+    background-attachment: fixed;
     height: 100%;
 }
 
@@ -60,6 +61,27 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
+}
+
+/** Content **/
+.post-card {
+    background-size: cover;
+    opacity: 1;
+}
+
+.caption-card {
+    text-align: center;
+    height: 50px;
+    background-color: aliceblue;
+    opacity: 0.7;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+	cursor: pointer;
+    color: black;
+    margin-bottom: 20px;
 }
 
 /** Footer **/

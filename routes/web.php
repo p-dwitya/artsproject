@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/photography', function () {
+//     return view('photos.photography');
+// });
+
+
+/* 
+    Model Routes
+*/
+
+Route::resource('photography','PhotosController');

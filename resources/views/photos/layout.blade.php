@@ -99,7 +99,7 @@
                 </div>
             </div>
         </div> -->
-		<div class="container-fluid film-box full-height">
+        <div class="container-fluid film-box">
 			<div class="row">
 				<!-- Navigation Menu -->
 				<div class="navbar">
@@ -111,33 +111,8 @@
 						<div class="navbar-left-sub col-xs-12"> Lorem ipsum dolor sit amet </div>
 					</div>
 				</div>
-				<!-- Menu -->
-				<div class="col-xs-12 menu-box">
-					<div class="col-xs-4">
-						<div class="col-xs-12 menu-cards pixel-card">
-							Pixel Arts
-						</div>
-					</div>
-					<a href="/photography"><div class="col-xs-4">
-						<div class="col-xs-12 menu-cards photo-card">
-							Photography
-						</div>
-					</div></a>
-					<div class="col-xs-4">
-						<div class="col-xs-12 menu-cards craft-card">
-							Craft
-						</div>
-					</div>
-				</div>
-				<!-- Footer -->
-				<div class="col-xs-12 footer-text">
-					<p>
-					Wates Street KM 9,5 <br>
-					Sedayu <br>
-					Bantul <br>
-					</p>
-				</div>
-			</div>
-		</div>
+        @yield('content')
+            </div>
+        </div>
     </body>
 </html>
