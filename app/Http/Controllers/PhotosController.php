@@ -15,7 +15,7 @@ class PhotosController extends Controller
     public function index()
     {
         $photos = Photos::latest()->paginate(5);
-        return view('photos.photography',compact('photos'))
+        return view('photos.index',compact('photos'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -37,12 +37,12 @@ class PhotosController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate([
-            'url' => 'required',
-            'caption' => 'required',
-        ]);
-        Article::create($request->all());
-        return redirect()->route('photos.photography')
+        // request()->validate([
+        //     'url' => 'required',
+        //     'caption' => 'required',
+        // ]);
+        Photos::create($request->all());
+        return redirect()->route('photos.index')
                         ->with('success','Photo created successfully');
     }
 
@@ -84,7 +84,7 @@ class PhotosController extends Controller
             'caption' => 'required',
         ]);
         Photos::find($id)->update($request->all());
-        return redirect()->route('photos.photography')
+        return redirect()->route('photos.index')
                         ->with('success','Photo updated successfully');
     }
 
@@ -97,7 +97,7 @@ class PhotosController extends Controller
     public function destroy($id)
     {
         Photos::find($id)->delete();
-        return redirect()->route('photos.photography')
+        return redirect()->route('photos.index')
                         ->with('success','Photo deleted successfully');
     }
 }

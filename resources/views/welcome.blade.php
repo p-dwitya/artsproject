@@ -118,7 +118,7 @@
 							Pixel Arts
 						</div>
 					</div>
-					<a href="/photography"><div class="col-xs-4">
+					<a href="/photos"><div class="col-xs-4">
 						<div class="col-xs-12 menu-cards photo-card">
 							Photography
 						</div>

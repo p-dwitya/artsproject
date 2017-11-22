@@ -24,4 +24,6 @@ Route::get('/', function () {
     Model Routes
 */
 
-Route::resource('photography','PhotosController');
+Route::resource('photos','PhotosController');
+
+
