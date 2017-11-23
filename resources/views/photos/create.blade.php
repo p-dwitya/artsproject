@@ -13,7 +13,7 @@
 </div>
 
 
-{!! Form::open(array('route' => 'photos.store','method'=>'POST')) !!}
+{!! Form::open(array('route' => 'photos.store','files'=> true,'method'=>'POST')) !!}
  @include('photos.form')
 {!! Form::close() !!}
 

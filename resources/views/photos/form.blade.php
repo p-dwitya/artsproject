@@ -2,7 +2,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>Url:</strong>
-            {!! Form::text('url', null, array('placeholder' => 'Url','class' => 'form-control')) !!}
+            {!! Form::file('url', null, array('placeholder' => 'Url','class' => 'form-control')) !!}
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">

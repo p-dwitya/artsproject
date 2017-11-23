@@ -41,7 +41,19 @@ class PhotosController extends Controller
         //     'url' => 'required',
         //     'caption' => 'required',
         // ]);
-        Photos::create($request->all());
+        $image = $request->file('url');
+        
+        $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
+    
+        $destinationPath = public_path('/img/photos');
+    
+        $image->move($destinationPath, $input['imagename']);
+        $urls = $input['imagename'];
+        $data = $request->all();
+        $data['url'] = $urls;
+        // $this->postImage->add($input);
+       
+        Photos::create($data);
         return redirect()->route('photos.index')
                         ->with('success','Photo created successfully');
     }
@@ -79,11 +91,19 @@ class PhotosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        request()->validate([
-            'url' => 'required',
-            'caption' => 'required',
-        ]);
-        Photos::find($id)->update($request->all());
+       
+        $image = $request->file('url');
+        
+        $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
+    
+        $destinationPath = public_path('/img/photos');
+    
+        $image->move($destinationPath, $input['imagename']);
+        $urls = $input['imagename'];
+        $data = $request->all();
+        $data['url'] = $urls;
+
+        Photos::find($id)->update($data);
         return redirect()->route('photos.index')
                         ->with('success','Photo updated successfully');
     }

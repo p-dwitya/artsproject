@@ -82,11 +82,21 @@
     color: black;
     margin-bottom: 20px;
 }
+.photo-detail-card {
+    background-size: contain;
+    height: 800px;
+    opacity: 1;
+}
 
 /** Form **/
 .form-title {
     margin-left: 15px;
     font-weight: bold;
+}
+.edit-btn{
+    margin-top: 3px;
+    margin-right: 30px;
+    width: 70px;
 }
 
 /** Footer **/
